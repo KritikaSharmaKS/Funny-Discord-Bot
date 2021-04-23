@@ -1,11 +1,11 @@
-name: hello-world
+name: deploy
 
 on:
   push:
     branches: [ master ]
 
 jobs:
-  hello:
+  launch-discord-bot:
     runs-on: ubuntu-latest
     steps:
     - name: SSH Remote Commands

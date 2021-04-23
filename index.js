@@ -29,11 +29,11 @@ function fetchJoke(cb) {
       if(joke.type === "twopart") {
         console.log("setup: ", joke.setup);
         console.log("delivery: ", joke.delivery);
-        return cb(null, `\n Coder1: ${joke.setup} \n Coder2: ${joke.delivery}`);
+        return cb(null, `Test\n Coder1: ${joke.setup} \n Coder2: ${joke.delivery}`);
       } 
       if(joke.type === "single"){
         console.log("joke: ", joke.joke);
-        return cb(null, joke.joke);
+        return cb(null, "Test\n" + joke.joke);
       }
     });
 
