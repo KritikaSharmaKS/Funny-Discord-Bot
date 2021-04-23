@@ -14,4 +14,9 @@ jobs:
         USERNAME: ubuntu
         HOST: ${{ secrets.HOST }}
         PASSWORD: ${{ secrets.PASSWORD }}
-        script: whoami
+        script: | 
+          cd Funny-Discord-Bot/
+          git pull
+          npm i
+          pm2 stop discordBot.js
+          pm2 start index.js --name discordBot.js
